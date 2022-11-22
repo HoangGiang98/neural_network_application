@@ -1,5 +1,5 @@
 {
-  "name": "nn_benchmanrk-frontend",
+  "name": "neural_network_frontend",
   "version": "1.0.0",
   "private": true,
   "dependencies": {
@@ -27,7 +27,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "start:febe": "concurrently \"npm run start:dev --prefix ../nn-benchmark-service\" \"npm start\""
+    "start:febe": "concurrently \"npm run start:dev --prefix ../neural_network_service\" \"npm start\""
   },
   "eslintConfig": {
     "extends": [

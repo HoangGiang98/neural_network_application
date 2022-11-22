@@ -1,5 +1,5 @@
 {
-  "name": "nn-benchmark-service",
+  "name": "neural_network_service",
   "version": "1.0.0",
   "main": "server.ts",
   "engines": {
@@ -11,9 +11,9 @@
     "start:dev": "NODE_ENV=development nodemon -e ts,js --exec ts-node -r tsconfig-paths/register src/server.ts",
     "build": "npm run clean && tsc --project tsconfig.json && tsc-alias -p tsconfig.json && npm run copyfiles:data",
     "copyfiles:data": "copyfiles data/* build",
-    "copyfiles:fe": "copyfiles -u 3 \"../nn-benchmark-frontend/build/**/*\" \"build/dist/Static\"",
+    "copyfiles:fe": "copyfiles -u 3 \"../neural_network_frontend/build/**/*\" \"build/dist/Static\"",
     "clean": "rimraf build",
-    "start:febe": "concurrently \"npm run start:dev\" \"npm start --prefix ../nn-benchmark-frontend\""
+    "start:febe": "concurrently \"npm run start:dev\" \"npm start --prefix ../neural_network_frontend\""
   },
   "author": "Giang Vu",
   "license": "ISC",
