@@ -1,0 +1,24 @@
+@import 'Styles/colors.scss';
+
+.neural-network__link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 20px 0px;
+  border-radius: 5px;
+
+  h2 {
+    margin: 0;
+    color: $primaryTextColor;
+    font-weight: 500;
+    padding-left: 20px;
+  }
+
+  &:hover {
+    background: $darkGray;
+  }
+
+  &.--selected {
+    background-color: $lighterGray;
+  }
+}

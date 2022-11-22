@@ -1,0 +1,211 @@
+@import 'Styles/colors.scss';
+
+// buttons
+@mixin primaryButton($width: 100%) {
+  width: $width;
+  button {
+    text-transform: inherit;
+    border-radius: 5px;
+    background: $primaryButtonColor !important;
+    border: 1px solid $primaryButtonColor;
+    width: 100%;
+    padding: 11px 15px 9px 15px;
+    height: auto;
+    color: $primaryTextColor !important;
+  }
+}
+@mixin secondaryButton($width: 100%) {
+  width: $width;
+  button {
+    text-transform: inherit;
+    border-radius: 5px;
+    background: transparent !important;
+    border: 1px solid $lightBorderColor;
+    width: 100%;
+    padding: 11px 15px 9px 15px;
+    height: auto;
+    color: $primaryTextColor !important;
+  }
+}
+@mixin addButton {
+  width: 26px;
+  height: 26px;
+  display: block;
+  background-color: $iconBackground;
+  border-radius: 100%;
+  box-shadow: $iconShadow;
+  padding: 0;
+  &:hover {
+    background-color: $iconBackgroundHover;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+  }
+}
+@mixin iconButton-default {
+  border-radius: 100%;
+  display: block;
+  display: inline-block;
+  cursor: pointer;
+  &:hover {
+    background: $lightTransparentBackground;
+  }
+}
+@mixin iconButton {
+  @include iconButton-default;
+  padding: 7px;
+  width: 40px;
+  height: 40px;
+}
+
+@mixin iconButton-small {
+  @include iconButton-default;
+  width: 27px;
+  height: 27px;
+  padding: 2px;
+}
+
+// padding
+@mixin pageContent {
+  padding: 50px;
+}
+
+@mixin tableauContent {
+  padding: 1vh;
+}
+
+@mixin tableEntry {
+  padding: 10px;
+  border-radius: 5px;
+}
+
+// content
+@mixin contentWrapper {
+  height: 100%;
+  @include pageContent;
+}
+
+@mixin tableauContentWrapper {
+  height: 100%;
+  @include tableauContent;
+}
+
+@mixin tableWrapper {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  &__content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 0; // Bug fix for firefox
+  }
+}
+
+@mixin tabBarWrapper {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+}
+@mixin tabBarWrapperTable {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+}
+
+@mixin contentStyle {
+  box-shadow: $contentShadow;
+  position: relative;
+  width: 100%;
+  background: $contentBackground;
+  padding: 50px;
+  overflow: auto;
+}
+
+@mixin dashboardTile($flex: 1) {
+  position: relative;
+  flex: $flex;
+}
+
+@mixin tabBarStyle {
+  width: 100%;
+  border-bottom: 1px solid $lighterGray;
+  margin: 20px 0;
+
+  a {
+    text-decoration: none;
+    vertical-align: bottom;
+    margin-right: 20px;
+
+    .tab-bar__item {
+      display: inline-block;
+
+      &.selected {
+        border-bottom: 3px solid $red;
+        margin-bottom: -2px;
+      }
+
+      h4 {
+        margin: 0;
+        padding-bottom: 10px;
+      }
+    }
+  }
+}
+
+// gradient
+@mixin gradient-diagonal($startColor, $endColor) {
+  background-color: $endColor;
+  background: -moz-linear-gradient(-45deg, $startColor, $endColor); // FF 3.6+
+  background: -webkit-gradient(
+    left top,
+    right bottom,
+    0 0,
+    100% 0,
+    from($startColor),
+    to($endColor)
+  ); // Safari 4+, Chrome 2+
+  background: -webkit-linear-gradient(
+    -45deg,
+    $startColor,
+    $endColor
+  ); // Safari 5.1+, Chrome 10+
+  background: -o-linear-gradient(135deg, $startColor, $endColor); // Opera 11.10
+  background: linear-gradient(135deg, $startColor, $endColor); // Standard, IE10
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($startColor)}', endColorstr='#{ie-hex-str($endColor)}', GradientType=1); // IE9 and down
+}
+
+// placeholder
+
+@mixin placeholder {
+  ::-webkit-input-placeholder {
+    @content;
+  }
+  :-moz-placeholder {
+    @content;
+  }
+  ::-moz-placeholder {
+    @content;
+  }
+  :-ms-input-placeholder {
+    @content;
+  }
+}
+
+@mixin scrollbar($borderColor: $darkGray, $backgroundColor: $darkestGray) {
+  scrollbar-color: $backgroundColor $borderColor;
+  scrollbar-width: thin;
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $backgroundColor;
+    border-radius: 14px;
+    border: 3px solid $borderColor;
+  }
+}

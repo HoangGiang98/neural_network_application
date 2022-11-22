@@ -1,0 +1,91 @@
+@import 'Styles/colors.scss';
+@import 'Styles/utils.scss';
+@import 'Styles/fonts.scss';
+
+html body {
+  height: 100vh;
+  #root {
+    height: 100%;
+  }
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  textarea:-webkit-autofill,
+  textarea:-webkit-autofill:hover,
+  textarea:-webkit-autofill:focus,
+  select:-webkit-autofill,
+  select:-webkit-autofill:hover,
+  select:-webkit-autofill:focus {
+    -webkit-text-fill-color: $primaryTextColor;
+    box-shadow: $loginShadow;
+    transition: background-color 5000s ease-in-out 0s;
+    caret-color: $primaryTextColor;
+  }
+}
+
+body {
+  background: $darkestGray;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  font-family: Catamaran;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body * {
+  @include text;
+}
+
+button::-moz-focus-inner,
+a::-moz-focus-inner {
+  border: 0;
+}
+
+h1:not([class]) {
+  @include headline;
+}
+h3:not([class]) {
+  @include headline-medium;
+}
+
+/**
+Change auto fill to look like a normal input
+ */
+@-webkit-keyframes autofill {
+  to {
+    color: $primaryTextColor;
+    background: transparent;
+  }
+}
+
+input:-webkit-autofill {
+  -webkit-animation-name: autofill;
+  -webkit-animation-fill-mode: both;
+}
+
+// Define scrollbar look globally
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: $darkGray;
+  border-radius: 14px;
+  border: 3px solid $gray;
+}
+
+* {
+  // Define edge scrollbar look
+  -ms-overflow-style: scrollbar;
+
+  // Firefox scrollbar look
+  scrollbar-color: $gray $darkGray;
+  scrollbar-width: auto;
+}
+
+*:-moz-focusring {
+  outline: none;
+}

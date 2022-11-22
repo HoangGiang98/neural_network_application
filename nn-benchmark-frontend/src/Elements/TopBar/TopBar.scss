@@ -1,0 +1,39 @@
+@import 'Styles/fonts.scss';
+@import 'Styles/colors.scss';
+@import 'Styles/dimensions.scss';
+
+.topbar {
+  width: 100%;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  overflow: visible;
+
+  a {
+    text-decoration: none;
+  }
+
+  .topbar__header-column {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    > * {
+      margin: 0;
+    }
+    .topbar__subtitle {
+      margin-top: 5px;
+    }
+  }
+
+  .topbar__action-column {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.topbar.minor {
+  margin-bottom: 0;
+}

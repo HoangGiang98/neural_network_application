@@ -1,0 +1,35 @@
+@import 'Styles/colors.scss';
+@import 'Styles/fonts.scss';
+@import 'Styles/utils.scss';
+
+input {
+  width: 100%;
+  @include text;
+  text-transform: none;
+  color: $primaryTextColor;
+  border: none;
+  outline: none;
+  padding: 3px 0;
+
+  @include placeholder {
+    @include text;
+    opacity: 0.4;
+  }
+  &.nn-input {
+    width: 100%;
+    min-height: 35px;
+    padding: 10px;
+    border-radius: 5px;
+    background: $lighterGray;
+    border: 0;
+    resize: none;
+    outline: none;
+
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill:active {
+      -webkit-box-shadow: 0 0 0 30px $lighterGray inset !important;
+    }
+  }
+}

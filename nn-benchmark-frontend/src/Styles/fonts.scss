@@ -1,0 +1,60 @@
+// Import of Raleway regular:400, semibold:600, bold:700
+@import url('https://fonts.googleapis.com/css?family=Catamaran:400,500,600,700,800');
+@import './colors.scss';
+
+/*
+* for information when to use wich mixin please visit 
+* https://confluence.inovex.de/pages/resumedraft.action?draftId=29100392&draftShareId=114b110d-2a65-4a7d-b21a-8d3526f52512
+*/
+
+@mixin headline-basic {
+  font-family: Catamaran, sans-serif;
+  font-weight: 600;
+  color: $primaryTextColor;
+}
+@mixin headline {
+  @include headline-basic;
+  font-size: 32px;
+  line-height: 40px;
+}
+
+@mixin headline-medium {
+  @include headline-basic;
+  font-size: 24px;
+  line-height: 20px;
+}
+
+@mixin text-basic {
+  font-family: Catamaran, sans-serif;
+  font-weight: 400;
+  color: $primaryTextColor;
+  letter-spacing: 1px;
+}
+
+@mixin text {
+  @include text-basic;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+@mixin text-bold {
+  @include text;
+  font-weight: 600;
+}
+
+@mixin text-medium {
+  @include text-basic;
+  font-size: 12px;
+  line-height: 12px;
+}
+
+@mixin text-medium-bold {
+  @include text-medium;
+  font-weight: 600;
+}
+
+@mixin text-small {
+  @include text-basic;
+  font-size: 10px;
+  line-height: 12px;
+}

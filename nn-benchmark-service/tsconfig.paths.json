@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "src/*": ["src/*"],
+      "Api/*": ["src/Api/*"],
+      "Service/*": ["src/Service/*"],
+      "Controller/*": ["src/Controller/*"],
+      "Types/*": ["src/Types/*"],
+      "Utils/*": ["src/Utils/*"]
+    }
+  }
+}

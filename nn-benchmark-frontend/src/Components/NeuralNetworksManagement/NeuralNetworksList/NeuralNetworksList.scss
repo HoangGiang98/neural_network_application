@@ -1,0 +1,27 @@
+@import 'Styles/fonts.scss';
+@import 'Styles/colors.scss';
+@import 'Styles/utils.scss';
+
+.neural-network-management__neural-network-list {
+  .neural-network-sidebar-list {
+    height: 100%;
+    width: 370px;
+    position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
+    @include pageContent;
+
+    .neural-network-sidebar-list__header {
+      h1 {
+        @include headline;
+        margin: 0;
+      }
+      a {
+        position: absolute;
+        right: 50px;
+        top: 45px;
+        @include addButton;
+      }
+    }
+  }
+}

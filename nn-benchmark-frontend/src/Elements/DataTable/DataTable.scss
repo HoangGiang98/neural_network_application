@@ -1,0 +1,26 @@
+@import 'Styles/fonts.scss';
+@import 'Styles/colors.scss';
+
+td {
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 5px;
+}
+
+#data-table {
+  margin: 20px auto;
+  td,
+  th {
+    @include text;
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+
+  th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4caf50;
+    color: $primaryTextColor;
+  }
+}

@@ -1,0 +1,107 @@
+@import 'Styles/fonts.scss';
+@import 'Styles/utils.scss';
+@import 'Styles/colors.scss';
+
+.nn-config-header {
+  padding-bottom: 8px;
+}
+.nn-section {
+  padding-bottom: 40px;
+}
+
+.nn-classes {
+  margin: 10px 0 10px 0;
+  &--cell {
+    @include text-bold;
+    display: inline-block;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    padding: 5px;
+    background-color: $red;
+  }
+  &__header {
+    margin-right: 4px;
+  }
+  &__label {
+    margin-right: 0.5px;
+  }
+}
+
+.data-table-wrapper {
+  overflow-x: visible;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  .nn-collapsible__trigger {
+    display: block;
+    @include text;
+    text-decoration: none;
+    color: $primaryTextColor;
+    position: relative;
+    outline: none;
+    min-height: 35px;
+    padding: 10px;
+    border-radius: 5px;
+    background: $lighterGray;
+    border: 0;
+    resize: none;
+  }
+  .nn-collapsible__trigger:after {
+    font-family: 'FontAwesome';
+    content: '\f107';
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    display: block;
+    transition: transform 300ms;
+  }
+  .nn-collapsible__trigger.is-open:after {
+    transform: rotateZ(180deg);
+  }
+  .nn-collapsible__trigger.is-disabled {
+    opacity: 0.5;
+    background-color: grey;
+  }
+}
+
+label {
+  @include text-bold;
+  margin-bottom: 10px;
+}
+
+.nn-config {
+  margin-left: 0px;
+  flex-basis: calc(25% - 5px);
+}
+
+.nn-inference__input {
+  margin-left: 0px;
+  flex-basis: calc(50% - 5px);
+}
+
+.nn-inference__result {
+  flex-basis: 100%;
+  margin-left: 0px;
+}
+
+.nn-wrapper {
+  display: flex;
+  width: 100%;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  .nn-eval {
+    flex-basis: calc(50% - 5px);
+  }
+  .nn-button {
+    flex-basis: calc(50% - 5px);
+    margin-bottom: 10px;
+  }
+  .nn-neuro-config,
+  .nn-activ-config {
+    flex-basis: calc(50% - 5px);
+  }
+  .nn-data {
+    flex-basis: calc(50% - 5px);
+  }
+}

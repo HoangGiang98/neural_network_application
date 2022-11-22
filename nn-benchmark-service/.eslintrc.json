@@ -1,0 +1,90 @@
+{
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+  "extends": [
+    "eslint:recommended", // Basic eslint ruleset
+    "plugin:@typescript-eslint/recommended", // Basic typescript ruleset
+    "plugin:@typescript-eslint/eslint-recommended", // Makes eslint-rules compatible wit typescript
+    "plugin:@typescript-eslint/recommended-requiring-type-checking" // enables typechecking
+  ],
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "plugins": ["@typescript-eslint"],
+  "parser": "@typescript-eslint/parser",
+  "rules": {
+    // eslint rules
+    // also all rules marked as recomended here:
+    // https://eslint.org/docs/rules/
+    "prefer-const": "error", // use const/let if possible
+    "no-multi-spaces": "error", // no unnecessary groups of whitespace
+    "no-return-await": "error", // no "await return" outside of try/catch-blocks
+    "no-useless-concat": "error", // diallows unnecessary concatenation of strings
+    "no-useless-return": "error",
+    "no-unexpected-multiline": "off", // deactivates parsing the code into to long lines
+    "intend": "off", //enforced by prettier
+    // typescript-eslint rules
+    // also all rules marked as recomended here:
+    // https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin#supported-rules
+    "@typescript-eslint/no-inferrable-types": "off", // deactivates inferred types
+    "@typescript-eslint/no-use-before-define": "off", // deactivates structured programming
+    "@typescript-eslint/no-non-null-assertion": "off", // allows using !
+    "@typescript-eslint/no-empty-interface": "off", // allow empty interfaces
+    "@typescript-eslint/await-thenable": "off", // allow await setState (better solutions?)
+    "@typescript-eslint/no-var-requires": "off", // allows using required
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    //
+    "@typescript-eslint/no-unsafe-assignment": "off",
+    "@typescript-eslint/no-unsafe-return": "off",
+    "@typescript-eslint/no-unsafe-member-access": "off",
+    "@typescript-eslint/no-misused-promises": "off",
+    //
+    "@typescript-eslint/no-explicit-any": "off", // explicit-any allow
+
+    "@typescript-eslint/naming-convention": [
+      "error",
+      {
+        "selector": "interface",
+        "format": ["PascalCase"],
+        "custom": {
+          "regex": "^BmML[A-Z]",
+          "match": true
+        }
+      }
+    ],
+    "@typescript-eslint/ban-types": [
+      "error",
+      {
+        "types": {
+          "String": {
+            "message": "Use string instead",
+            "fixWith": "string"
+          },
+          "Boolean": {
+            "message": "Use boolean instead",
+            "fixWith": "boolean"
+          },
+          "Number": {
+            "message": "Use number instead",
+            "fixWith": "number"
+          },
+          "Object": {
+            "message": "Use object instead",
+            "fixWith": "object"
+          }
+        }
+      }
+    ]
+  },
+  "overrides": [
+    // override rules in special cases,
+  ]
+}

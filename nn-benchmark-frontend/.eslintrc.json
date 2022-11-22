@@ -1,0 +1,115 @@
+{
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true,
+    "jest": true
+  },
+  "extends": [
+    "eslint:recommended", // Basic eslint ruleset
+    "plugin:react/recommended", // Basic react ruleset
+    "plugin:react-hooks/recommended", // Basic react hooks ruleset
+    "plugin:@typescript-eslint/eslint-recommended", // Makes eslint-rules compatible wit typescript
+    "plugin:@typescript-eslint/recommended", // Basic typescript ruleset
+    "plugin:@typescript-eslint/recommended-requiring-type-checking" // enables typechecking
+  ],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parserOptions": {
+    "project": "tsconfig.json",
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": ["react", "@typescript-eslint", "react-hooks"],
+  "settings": {
+    "react": {
+      "pragma": "React",
+      "version": "detect" //eslint will detect right react version
+    }
+  },
+  "parser": "@typescript-eslint/parser",
+  //custom BmML rules
+  "rules": {
+    // eslint rules
+    // also all rules marked as recomended here:
+    // https://eslint.org/docs/rules/
+    "prefer-const": "error", // use const/let if possible
+    "no-multi-spaces": "error", // no unnecessary groups of whitespace
+    "no-return-await": "error", // no "await return" outside of try/catch-blocks
+    "no-useless-concat": "error", // diallows unnecessary concatenation of strings
+    "no-useless-return": "error",
+    "no-unexpected-multiline": "off", // deactivates parsing the code into to long lines
+    "intend": "off", //enforced by prettier
+    "react/react-in-jsx-scope": "off",
+
+    // typescript-eslint rules
+    // also all rules marked as recomended here:
+    // https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin#supported-rules
+    "@typescript-eslint/no-inferrable-types": "off", // deactivates inferred types
+    "@typescript-eslint/no-use-before-define": "off", // deactivates structured programming
+    "@typescript-eslint/no-non-null-assertion": "off", // allows using !
+    "@typescript-eslint/no-empty-interface": "off", // allow empty interfaces
+    "@typescript-eslint/await-thenable": "off", // allow await setState (better solutions?)
+    "@typescript-eslint/no-var-requires": "off", // allows using required
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/ban-ts-comment": "off",
+    //
+    "@typescript-eslint/no-unsafe-assignment": "off",
+    "@typescript-eslint/no-unsafe-return": "off",
+    "@typescript-eslint/no-unsafe-member-access": "off",
+    //
+    "@typescript-eslint/no-explicit-any": "off", // explicit-any allow
+    "@typescript-eslint/no-misused-promises": [
+      // allow "<execute something> && <execute something>"
+      "error",
+      { "checksConditionals": false }
+    ],
+
+    "@typescript-eslint/naming-convention": [
+      "error",
+      {
+        "selector": "interface",
+        "format": ["PascalCase"],
+        "custom": {
+          "regex": "^BmML[A-Z]|^Window|^Performance",
+          "match": true
+        }
+      }
+    ],
+    "@typescript-eslint/ban-types": [
+      "error",
+      {
+        "types": {
+          "String": {
+            "message": "Use string instead",
+            "fixWith": "string"
+          },
+          "Boolean": {
+            "message": "Use boolean instead",
+            "fixWith": "boolean"
+          },
+          "Number": {
+            "message": "Use number instead",
+            "fixWith": "number"
+          },
+          "Object": {
+            "message": "Use object instead",
+            "fixWith": "object"
+          }
+        }
+      }
+    ],
+
+    // react-hooks-eslint rules
+    "react-hooks/rules-of-hooks": "error", // Checks rules of Hooks
+    "react-hooks/exhaustive-deps": "warn" // Checks effect dependencies
+  },
+  "overrides": [
+    // override rules in special cases,
+  ]
+}

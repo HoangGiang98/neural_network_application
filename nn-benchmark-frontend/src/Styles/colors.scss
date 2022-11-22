@@ -1,0 +1,53 @@
+/*
+* for information when to use wich color please visit 
+* https://confluence.inovex.de/pages/resumedraft.action?draftId=29100392&draftShareId=114b110d-2a65-4a7d-b21a-8d3526f52512
+*/
+
+// basic colors
+$black: #000000;
+$red: #e8584d;
+$darkestGray: #1d1d23;
+$darkGray: #2b2b33;
+$gray: #37373f;
+$lighterGray: #41414a;
+$iceGray: #9191a2;
+$green: #009440;
+
+// text colors
+$primaryTextColor: #f0f0f0;
+$secondaryTextColor: $iceGray;
+$inputColor: $iceGray;
+
+// border
+$grayBorderColor: $lighterGray;
+$lightBorderColor: rgba(240, 240, 240, 0.5);
+
+// button
+$primaryButtonColor: green;
+
+// backgrounds
+$contentBackground: $darkGray;
+$lightTransparentBackground: rgba(255, 255, 255, 0.2);
+$darkTransparentBackground: rgba(0, 0, 0, 0.52);
+$iconBackground: #696975;
+$iconBackgroundHover: $iceGray;
+
+// status colors
+$stateRed: $red;
+$stateYellow: #fbe492;
+$stateGreen: #87bb9f;
+$stateBlue: #81a4bb;
+$statePurple: #95768d;
+$stateGray: #c9c9d0;
+
+// shadows
+$shadowColor: rgba(0, 0, 0, 0.3);
+$iconShadow: 3px 3px 4px $shadowColor;
+$loginShadow: 0px 0px 20px $shadowColor;
+$tileShadow: 0px 5px 10px $shadowColor;
+$toastShadow: 0px 5px 10px $shadowColor;
+$navigationShadow: 10px 0px 10px $shadowColor;
+$contentTableHeaderShadow: 0px 20px 20px -20px rgba(0, 0, 0, 0.5);
+$contentShadow: -10px 0px 20px rgba(0, 0, 0, 0.3);
+$grayInsetShadow: inset 0px -15px 9px $gray;
+$tooltipShadow: 0px 5px 10px $shadowColor;

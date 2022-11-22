@@ -1,0 +1,16 @@
+@import 'Styles/colors.scss';
+@import 'Styles/utils.scss';
+
+.neural-networks-management {
+  height: 100%;
+
+  .neural-networks-management__content {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+
+    .neural-networks-management__form {
+      @include contentStyle;
+    }
+  }
+}

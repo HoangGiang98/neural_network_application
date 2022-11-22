@@ -1,0 +1,32 @@
+@import 'Styles/colors.scss';
+@import 'Styles/utils.scss';
+@import 'Styles/fonts.scss';
+
+.nn-selector {
+  width: 100%;
+  height: 42px;
+  min-height: auto;
+  padding: 10px;
+  border-radius: 5px;
+  background: $lighterGray;
+  border: 0;
+  resize: none;
+  outline: none;
+
+  @include text-basic;
+  text-transform: none;
+  font-size: 12px;
+  line-height: 22px;
+
+  @include placeholder {
+    @include text;
+    opacity: 0.4;
+  }
+
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus,
+  &:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px $lighterGray inset !important;
+  }
+}

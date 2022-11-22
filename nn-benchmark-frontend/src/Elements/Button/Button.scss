@@ -1,0 +1,50 @@
+@import 'Styles/colors.scss';
+
+button.nn-button {
+  cursor: pointer;
+  visibility: inherit;
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-transform: inherit;
+  color: $primaryTextColor !important;
+  overflow: hidden;
+
+  &[btn-theme='train'] {
+    background: $primaryButtonColor !important;
+    border: 1px solid $primaryButtonColor;
+  }
+
+  &[btn-theme='test'] {
+    background: $red !important;
+    border: 1px solid $red;
+  }
+
+  &:disabled,
+  &[disabled] {
+    background: transparent !important;
+    border: 1px solid $lightBorderColor;
+  }
+
+  // hover effect
+  &:before {
+    content: '';
+    pointer-events: none;
+    transition: opacity 15ms linear;
+    opacity: 0;
+    z-index: 1;
+    position: absolute;
+    top: calc(50% - 100%);
+    left: calc(50% - 100%);
+    width: 200%;
+    height: 200%;
+  }
+
+  &:hover:not([disabled])::before,
+  &:focus:not([disabled])::before {
+    opacity: 0.08;
+    background-color: #fff;
+  }
+}

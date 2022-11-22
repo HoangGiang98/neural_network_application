@@ -1,0 +1,12 @@
+@import 'Styles/fonts.scss';
+
+.nn-parameters-form {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  height: auto;
+
+  label {
+    display: inline-block;
+  }
+}

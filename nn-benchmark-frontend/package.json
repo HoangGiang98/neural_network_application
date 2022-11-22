@@ -1,0 +1,64 @@
+{
+  "name": "nn_benchmanrk-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "@tensorflow/tfjs": "^3.13.0",
+    "axios": "^0.24.0",
+    "classnames": "^2.3.1",
+    "concurrently": "^7.0.0",
+    "file-saver": "^2.0.5",
+    "http-proxy-middleware": "^2.0.1",
+    "install": "^0.13.0",
+    "npm": "^8.1.4",
+    "papaparse": "^5.3.1",
+    "react": "^17.0.2",
+    "react-collapsible": "^2.8.4",
+    "react-dom": "^17.0.2",
+    "react-redux": "^7.2.6",
+    "react-router-dom": "^6.0.2",
+    "react-scripts": "4.0.3",
+    "redux": "^4.1.2",
+    "redux-thunk": "^2.4.1",
+    "web-vitals": "^1.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "start:febe": "concurrently \"npm run start:dev --prefix ../nn-benchmark-service\" \"npm start\""
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.1",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.8.3",
+    "@types/file-saver": "^2.0.5",
+    "@types/jest": "^26.0.24",
+    "@types/node": "^12.20.40",
+    "@types/papaparse": "^5.3.1",
+    "@types/react": "^17.0.38",
+    "@types/react-dom": "^17.0.11",
+    "redux-devtools-extension": "^2.13.9",
+    "sass": "^1.45.2",
+    "typescript": "^4.5.4"
+  }
+}
