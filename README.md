@@ -64,4 +64,4 @@ Open http://localhost:8080/api/health to view it in the browser.
 ### `npm run start:febe`
 
 Runs the app in the development mode in default port 8080 for Backend and port 3000 for Frontend.\
-Open (http://localhost:8080/api/health) (http://localhost:3000/api/health) to view it in the browser.
+Open (http://localhost:3000) (http://localhost:8080/api/health) to view it in the browser.
