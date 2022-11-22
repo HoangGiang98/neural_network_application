@@ -59,9 +59,9 @@ Packages the entire application to `*neural_network_service/build/dist*` directo
 ### `npm run start`
 
 Runs the app in the production mode in default port 8080.\
-Open [http://localhost:8080/api/health] to view it in the browser.
+Open http://localhost:8080/api/health to view it in the browser.
 
 ### `npm run start:febe`
 
 Runs the app in the development mode in default port 8080 for Backend and port 3000 for Frontend.\
-Open [(http://localhost:8080/api/health)] [(http://localhost:3000/api/health)] to view it in the browser.
+Open (http://localhost:8080/api/health) (http://localhost:3000/api/health) to view it in the browser.
