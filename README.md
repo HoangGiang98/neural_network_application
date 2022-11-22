@@ -40,9 +40,28 @@ The prototype’s overall UI design is comprised of several sections:
 
 ## Available Scripts
 
-In the project directory, you can run:
+In the `*neural_network_application*` project directory, you can run:
 
-### `npm start:dev`
+### `npm run build:client`
 
-Runs the app in the development mode in default port 8080.\
-Open [http://localhost:8080/api/health](http://localhost:3000/api/health) to view it in the browser.
+Builds the app's client side for production to the `build` folder.\
+For more details, take a look at the `*neural_network_frontend*` directory.
+
+### `npm run build:server`
+
+Builds the app's server side for production to the `build` folder.\
+For more details, take a look at the `*neural_network_service*` directory.
+
+### `npm run build:package`
+
+Packages the entire application to `*neural_network_service/build/dist*` directory for deployment, etc.\
+
+### `npm run start`
+
+Runs the app in the production mode in default port 8080.\
+Open [http://localhost:8080/api/health] to view it in the browser.
+
+### `npm run start:febe`
+
+Runs the app in the development mode in default port 8080 for Backend and port 3000 for Frontend.\
+Open [(http://localhost:8080/api/health)] [(http://localhost:3000/api/health)] to view it in the browser.
