@@ -1,15 +1,15 @@
 {
-  "name": "nn_benchmark_app",
+  "name": "neural_network_application",
   "version": "1.0.0",
   "description": "",
-  "main": "nn-benchmark-service/build/server.js",
+  "main": "neural_network_service/build/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:client": "cd nn-benchmark-frontend && npm install && npm run build",
-    "build:server": "cd nn-benchmark-service && npm install && npm run build",
-    "package": "npm run build:client && npm run build:server && cd nn-benchmark-service && npm run copyfiles:fe",
-    "start": "npm run package && cd nn-benchmark-service && npm run start:prod",
-    "start:febe": "cd nn-benchmark-service && npm run start:febe"
+    "build:client": "cd neural_network_frontend && npm install && npm run build",
+    "build:server": "cd neural_network_service && npm install && npm run build",
+    "package": "npm run build:client && npm run build:server && cd neural_network_service && npm run copyfiles:fe",
+    "start": "npm run package && cd neural_network_service && npm run start:prod",
+    "start:febe": "cd neural_network_service && npm run start:febe"
   },
   "keywords": [],
   "author": "",
