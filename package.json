@@ -3,12 +3,17 @@
   "version": "1.0.0",
   "description": "",
   "main": "neural_network_service/build/server.js",
+  "engines": {
+    "node": "16.13.1"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:client": "cd neural_network_frontend && npm install && npm run build",
-    "build:server": "cd neural_network_service && npm install && npm run build",
-    "package": "npm run build:client && npm run build:server && cd neural_network_service && npm run copyfiles:fe",
-    "start": "npm run package && cd neural_network_service && npm run start:prod",
+    "install:client": "cd neural_network_frontend && npm install",
+    "install:server": "cd neural_network_service && npm install",
+    "build:client": "cd neural_network_service && npm run build",
+    "build:server": "cd neural_network_service && npm run build",
+    "package": "cd neural_network_service && npm run copyfiles:fe",
+    "start": "cd neural_network_service && npm run start:prod",
     "start:febe": "cd neural_network_service && npm run start:febe"
   },
   "keywords": [],
