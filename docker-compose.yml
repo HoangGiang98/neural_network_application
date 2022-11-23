@@ -1,6 +1,7 @@
 version: '3'
 services:
-  nn_app:
+  web_prod:
     build: .
+    image: giangvu98/nn_app:1.0
     ports:
       - '8080:8080'
