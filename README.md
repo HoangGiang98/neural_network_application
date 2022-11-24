@@ -48,11 +48,11 @@ In the `*neural_network_application*` project directory, you can run:
 
 ### `npm run install:client`
 
-Intalls the app's dependencies in client side.\
+Intalls the app's dependencies in client side.
 
 ### `npm run install:server`
 
-Intalls the app's dependencies in server side.\
+Intalls the app's dependencies in server side.
 
 ### `npm run build:client`
 
