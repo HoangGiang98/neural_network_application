@@ -64,7 +64,7 @@ For more details, take a look at the `*neural_network_frontend*` directory.
 Builds the app's server side for production to the `build` folder.\
 For more details, take a look at the `*neural_network_service*` directory.
 
-### `npm run build:package`
+### `npm run package`
 
 Packages the entire application to `*neural_network_service/build/dist*` directory for deployment, etc.\
 
