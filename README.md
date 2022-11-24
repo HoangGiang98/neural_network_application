@@ -79,7 +79,5 @@ Runs the app in the development mode in default port 8080 for Backend and port 3
 Open (http://localhost:3000) (http://localhost:8080/api/health) to view it in the browser.
 
 # TODO
-
-- Integrate docker to the project
 - Create CI/CD pipeline ?
 - Add features?
